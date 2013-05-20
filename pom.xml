@@ -81,7 +81,7 @@ under the License.
             <exclude>.git/**</exclude>
             <exclude>.gitignore</exclude>
             <exclude>.repository/</exclude>
-            <exclude>**/MANIFEST.MF</exclude>          
+            <exclude>**/MANIFEST.MF</exclude>
             </excludes>
           </configuration>
           <executions>
@@ -124,7 +124,7 @@ under the License.
                    <exclude>.git/**</exclude>
                    <exclude>.gitignore</exclude>
                    <exclude>.repository/</exclude>
-                    <exclude>**/MANIFEST.MF</exclude>          
+                   <exclude>**/MANIFEST.MF</exclude>
                   </excludes>
                 </configuration>
               </plugin>
