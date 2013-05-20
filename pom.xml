@@ -81,10 +81,10 @@ under the License.
             <exclude>.git/**</exclude>
             <exclude>.gitignore</exclude>
             <exclude>.repository/</exclude>
-            <exclude>manifest.mf</exclude>          
+            <exclude>**/MANIFEST.MF</exclude>          
             </excludes>
           </configuration>
-          <!--executions>
+          <executions>
             <execution>
               <id>rat-check</id>
               <phase>test</phase>
@@ -92,7 +92,7 @@ under the License.
                 <goal>check</goal>
               </goals>
             </execution>
-          </executions -->
+          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -141,6 +141,10 @@ under the License.
       </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+      <plugin>
+          <groupId>org.apache.rat</groupId>
+          <artifactId>apache-rat-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
