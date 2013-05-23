@@ -7,8 +7,9 @@
   <name>Apache Hadoop Development Tools</name>
   <description>Eclipse tools for developing against the Hadoop platform</description>
   <modules>
-  	<module>org.apache.hadoop.eclipse</module>
+    <module>org.apache.hadoop.eclipse</module>
     <module>org.apache.hdt.core</module>
+    <module>org.apache.hdt.core.test</module>
     <module>org.apache.hdt.ui</module>
     <module>org.apache.hdt.debug.core</module>
     <module>org.apache.hdt.debug.ui</module>
@@ -20,7 +21,7 @@
   </modules>
 
   <properties>
-    <tycho-version>0.16.0</tycho-version>
+    <tycho-version>0.17.0</tycho-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -33,14 +34,23 @@
   </repositories>
 
   <build>
-    <plugins>
+   <pluginManagement>
+     <plugins>
+      <plugin>
+	<groupId>org.eclipse.tycho</groupId>
+ 	<artifactId>tycho-surefire-plugin</artifactId>
+	<version>${tycho-version}</version>
+        <configuration>
+            <useUIHarness>true</useUIHarness>
+        </configuration>
+      </plugin>
+
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-maven-plugin</artifactId>
         <version>${tycho-version}</version>
         <extensions>true</extensions>
-      </plugin>
-
+     </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.0</version>
@@ -49,7 +59,17 @@
           <target>1.6</target>
         </configuration>
       </plugin>
+     </plugins>
+   </pluginManagement>
 
+    <plugins>
+       <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
     </plugins>
   </build>
 </project>
