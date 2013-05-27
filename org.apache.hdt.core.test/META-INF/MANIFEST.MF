@@ -9,3 +9,5 @@ Eclipse-ExtensibleAPI: true
 Import-Package: org.junit
 Bundle-ClassPath: .,
  lib/junit-4.8.2.jar
+
+
