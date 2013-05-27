@@ -11,7 +11,7 @@ import org.junit.Test;
 public class MapReduceNatureTest {
 
 	@Test
-	public void testConfigure() throws Exception {
+	public void configureShouldAddLibsToClasspath() throws Exception {
 		IProject project = TestUtils.createProject();
 		IJavaProject javaProject = TestUtils.setJavaNature(project);
 		MapReduceNature nature = new MapReduceNature();
