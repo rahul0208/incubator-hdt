@@ -6,7 +6,8 @@ Bundle-Version: 0.0.1.qualifier
 Fragment-Host: org.apache.hdt.core
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Eclipse-ExtensibleAPI: true 
-Import-Package: org.junit
+Import-Package: org.junit,
+ org.junit.rules
 Bundle-ClassPath: .,
  lib/junit-4.8.2.jar
 
